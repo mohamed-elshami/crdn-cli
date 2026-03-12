@@ -1,0 +1,11 @@
+{
+  "name": "create-crdn-app",
+  "version": "1.0.0",
+  "bin": {
+    "create-crdn-app": "./bin/index.js"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "fs-extra": "^11.2.0"
+  }
+}
