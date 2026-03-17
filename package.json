@@ -1,6 +1,6 @@
 {
   "name": "create-motest-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI to generate motest Next.js starter",
   "bin": {
     "create-motest-app": "./bin/index.js"
