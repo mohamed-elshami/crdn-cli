@@ -1,6 +1,6 @@
 "use client";
-
-import { useAuth } from "../hooks/useAuth";
+import React from "react";
+import { useAuth } from "@/features/auth/hooks/useAuth";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";

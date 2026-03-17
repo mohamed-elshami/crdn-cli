@@ -1,55 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CRDN Next.js Starter
 
-## Production Starter Checklist
+Scaffolded by **create-crdn-app**. A production-ready Next.js starter with App Router, TypeScript, Tailwind CSS, React Query, next-intl, auth scaffold, API client, SEO helpers, and analytics placeholders.
 
-| Item | Status | Location |
-|------|--------|----------|
-| React Query | ✅ | `src/lib/react-query/provider.tsx` – wrap app in `ReactQueryProvider` |
-| API layer | ✅ | `src/lib/api/client.ts` – axios instance, set `NEXT_PUBLIC_API_URL` |
-| Feature architecture | ✅ | `src/features/auth` – api, components, hooks, types, index |
-| Authentication | ✅ | `src/features/auth` – `useAuth`, `LoginForm`, `authApi` |
-| ESLint + Prettier | ✅ | `npm run lint`, `npm run format` – Prettier disables conflicting ESLint rules |
-| Analytics hook | ✅ | `src/hooks/usePageView.ts` – call in layout to track route changes; `src/lib/analytics/` for `trackEvent` |
+## Prerequisites
 
-## Getting Started
+- Node.js 18+
+- npm, pnpm, or yarn
 
-First, run the development server:
+## Creating a new app
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npx create-crdn-app my-app
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open the project and follow the quick start below.
 
-You can start editing the page by modifying `src/app/page.tsx`. The page auto-updates as you edit the file.
+## Quick start
 
-```bash
-# Lint & format
-npm run lint
-npm run lint:fix
-npm run format
-npm run format:check
-```
+1. **Install dependencies**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+   ```bash
+   cd my-app
+   npm install
+   ```
 
-## Learn More
+2. **Environment**  
+   Copy `.env.example` to `.env.local`, set `NEXT_PUBLIC_API_URL` (and optionally `NEXT_PUBLIC_APP_URL` for SEO).
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   cp .env.example .env.local
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Run the dev server**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```bash
+   npm run dev
+   ```
 
-## Deploy on Vercel
+4. Open [http://localhost:3000](http://localhost:3000). You’ll be redirected to `/en` (or the locale in your cookie). Try `/en/login` for the login page.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Scripts
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Script          | Description                |
+|-----------------|----------------------------|
+| `npm run dev`   | Start development server   |
+| `npm run build` | Build for production      |
+| `npm run start` | Start production server   |
+| `npm run lint`  | Run ESLint                |
+| `npm run lint:fix` | Run ESLint with auto-fix |
+| `npm run format`   | Format with Prettier      |
+| `npm run format:check` | Check formatting with Prettier |
+| `npm test`         | Run tests (Jest)          |
+| `npm run test:watch` | Run tests in watch mode |
+| `npm run test:coverage` | Run tests with coverage |
+
+## Documentation
+
+Full documentation is in the **[docs](./docs/)** folder:
+
+- [Getting started](docs/getting-started.md)
+- [Project structure](docs/project-structure.md)
+- [Environment](docs/environment.md)
+- [API layer](docs/api-layer.md)
+- [React Query](docs/react-query.md)
+- [Authentication](docs/authentication.md)
+- [Internationalization](docs/internationalization.md)
+- [SEO](docs/seo.md)
+- [Analytics](docs/analytics.md)
+- [Testing](docs/testing.md)
+- [Adding features](docs/adding-features.md)
+
+## Tech stack
+
+- **Next.js** (App Router), **TypeScript**, **Tailwind CSS**
+- **React Query** – server state
+- **next-intl** – i18n and routing
+- **ESLint**, **Prettier**
+
+## Learn more
+
+- [Template docs](./docs/) – architecture and feature guides
+- [Next.js documentation](https://nextjs.org/docs)

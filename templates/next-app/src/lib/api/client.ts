@@ -1,6 +1,6 @@
 import axios, { type AxiosRequestConfig } from "axios";
 import { env } from "@/config/env";
-
+import { ApiError } from "./apiError";
 export const api = axios.create({
   adapter: "fetch",
   baseURL: env.apiUrl,
@@ -10,6 +10,18 @@ export const api = axios.create({
 });
 
 type RequestConfig<D = unknown> = AxiosRequestConfig<D>;
+
+api.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    const status = error.response?.status;
+    const data = error.response?.data;
+
+    const message = data?.message || error.message || "Unexpected API error";
+
+    return Promise.reject(new ApiError(message, status, data));
+  }
+);
 
 export async function get<T = unknown>(
   url: string,
