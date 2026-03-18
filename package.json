@@ -1,21 +1,23 @@
 {
-  "name": "create-motest-app",
-  "version": "1.0.1",
-  "description": "CLI to generate motest Next.js starter",
+  "name": "create-crdn-app",
+  "version": "1.0.0",
+  "description": "CLI to generate crdn Next.js starter",
   "bin": {
-    "create-motest-app": "./bin/index.js"
+    "create-crdn-app": "./bin/index.js"
   },
   "files": [
     "bin",
+    "src",
     "templates"
   ],
   "keywords": [
     "cli",
     "nextjs",
     "starter",
-    "motest"
+    "crdn"
   ],
   "author": "Creiden-Team",
+  "homepage": "https://creiden.com",
   "license": "MIT",
   "engines": {
     "node": ">=18"
